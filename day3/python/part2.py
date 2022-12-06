@@ -4,16 +4,19 @@ import string, numpy
 
 dictionnary = string.ascii_lowercase + string.ascii_uppercase
 
-def get_letter_score(letter:str):
+
+def get_letter_score(letter: str):
     for idx, _letter in enumerate(dictionnary):
         if letter == _letter:
             return idx + 1
     raise ValueError("not a valid letter")
 
-with open('../ressources/input.txt') as f:
+
+with open("../ressources/input.txt") as f:
     lines = [line[:-1] for line in f.readlines()]
 
 new_line = numpy.array(lines).reshape((-1, 3))
+
 
 def get_common_letter(letter_list):
     list1, list2, list3 = letter_list
