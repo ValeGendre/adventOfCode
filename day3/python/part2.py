@@ -12,7 +12,7 @@ def get_letter_score(letter: str):
     raise ValueError("not a valid letter")
 
 
-with open("../ressources/input.txt") as f:
+with open("../ressources/input_max.txt") as f:
     lines = [line[:-1] for line in f.readlines()]
 
 new_line = numpy.array(lines).reshape((-1, 3))
