@@ -14,5 +14,3 @@ for idx, packet in enumerate(zip(*data_packet_to_iterable(n)), start=n):
     if len(set(packet))==n:
         print(idx)
         break
-
-
